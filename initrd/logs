@@ -1,0 +1,35 @@
+dracut:/# 
+dracut:/# 
+dracut:/# ls
+bin  dracut-state.sh  init  lib64  root  sbin	   sys	    tmp  var
+dev  etc	      lib   proc   run	 shutdown  sysroot  usr
+dracut:/# ls /usr/bin/
+arping		    flock	rm
+awk		    gawk	sed
+bash		    grep	setfont
+busctl		    gzip	setsid
+cat		    hello	sh
+chmod		    journalctl	sleep
+chown		    kbd_mode	stat
+cp		    kmod	stty
+dbus-broker	    less	systemctl
+dbus-broker-launch  ln		systemd-ask-password
+dmesg		    loadkeys	systemd-cgls
+dracut-cmdline	    loginctl	systemd-escape
+dracut-cmdline-ask  ls		systemd-run
+dracut-emergency    mkdir	systemd-sysusers
+dracut-getarg	    mkfifo	systemd-tmpfiles
+dracut-getargs	    mknod	systemd-tty-ask-password-agent
+dracut-initqueue    mount	teamd
+dracut-mount	    mv		timeout
+dracut-pre-mount    nm-online	tr
+dracut-pre-pivot    nmcli	true
+dracut-pre-trigger  pgrep	udevadm
+dracut-pre-udev     pidof	umount
+dracut-util	    pkill	uname
+echo		    ps		vi
+findmnt		    readlink
+dracut:/# hello 
+Hello from custom initramfs
+ dracut:/# reboot
+

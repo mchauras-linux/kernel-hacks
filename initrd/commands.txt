@@ -1,0 +1,2 @@
+kexec -p --initrd=/root/src/kernel-hacks/newinitramfs.img /root/src/linux-mchauras/vmlinux
+echo c > /proc/sysrq-trigger
