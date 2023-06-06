@@ -1,19 +1,31 @@
 #include <linux/module.h>  
 #include <linux/kernel.h>  
 #include <linux/init.h>
-MODULE_LICENSE("GPL");
-MODULE_DESCRIPTION("Hello world!");
+#include <linux/kexec.h>
 
-static int __init hello_init(void)
+
+MODULE_LICENSE("GPL");
+MODULE_DESCRIPTION("Kimage Manipulation");
+
+static int __init kimage_init(void)
 {
-    printk(KERN_INFO "Hello world\n");
-    return 0;
+	struct kimage *image;
+	image = kexec_image;
+	if(!image) {
+		printk(KERN_INFO "Image Found\n");
+	}
+	image = kexec_crash_image;
+	if(!image) {
+		printk(KERN_INFO "Crash Image Found\n");
+	}
+	printk(KERN_INFO "Hello world\n");
+	return 0;
 }
 
-static void __exit hello_exit(void)
+static void __exit kimage_exit(void)
 {
     printk(KERN_INFO "bye bye world\n");
 }
 
-module_init(hello_init);
-module_exit(hello_exit);
+module_init(kimage_init);
+module_exit(kimage_exit);
